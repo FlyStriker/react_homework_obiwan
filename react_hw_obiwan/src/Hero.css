@@ -8,45 +8,55 @@
     flex-direction: column;
     margin-bottom: 20px;
 }
-.hero_name{
-font-size: large;
-font-weight: 600;
+
+.hero_name {
+    font-size: large;
+    font-weight: 600;
 }
-.hero_birth{
+
+.hero_birth {
     font-size: medium;
     font-weight: 400;
 }
-.hero_gender{
+
+.hero_gender {
     font-size: medium;
     font-weight: 400;
 }
-.hero_height{
+
+.hero_height {
     font-size: medium;
     font-weight: 400
 }
-.hero_films_list{
+
+.hero_films_list {
     list-style-type: ellipsis;
 
 }
-.hero_films_list p{
-font-size: large;
+
+.hero_films_list p {
+    font-size: large;
     font-weight: 600
 }
-.hero_starships{
-list-style-type: ellipsis;
+
+.hero_starships {
+    list-style-type: ellipsis;
 
 }
-.hero_starships p{
-font-size: large;
-font-weight: 600
+
+.hero_starships p {
+    font-size: large;
+    font-weight: 600
 }
-.loading_hero{
+
+.loading_hero {
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
-.loader_circle_hero{
+
+.loader_circle_hero {
     margin-left: 20px;
     border: 8px solid #f3f3f3;
     border-radius: 50%;

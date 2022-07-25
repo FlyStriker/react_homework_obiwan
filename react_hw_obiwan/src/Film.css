@@ -8,45 +8,53 @@
     flex-direction: column;
     margin-bottom: 20px;
 }
-.film_about{
+
+.film_about {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.film_title_name{
-font-size: large;
-font-weight: 600;
+
+.film_title_name {
+    font-size: large;
+    font-weight: 600;
 }
-.film_info{
+
+.film_info {
     margin-left: 10px;
     margin-right: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.film_data_release{
+
+.film_data_release {
     font-size: large;
     font-weight: 400;
 }
-.film_director{
+
+.film_director {
     font-size: large;
     font-weight: 400;
 }
-.characters{
+
+.characters {
     font-size: large;
     font-weight: 400;
     font-style: normal;
     list-style-type: ellipsis;
-    
+
 
 }
-.species{
+
+.species {
     font-size: large;
     font-weight: 400;
     font-style: normal;
     list-style-type: ellipsis;
-    
+
 
 }
+
 .loading_film {
     display: flex;
     align-items: center;
