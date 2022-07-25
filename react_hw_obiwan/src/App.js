@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./Film.css";
+import "./Hero.css";
+import React, { useState } from "react";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { Provider, connect } from "react-redux";
+import promiseReducer from "./components/PromiseReducer";
+import actionPromise from "./components/ActionPromise";
+import Hero from "./components/HeroInfo";
+import Film from "./components/FilmInfo";
+import fetchData from "./components/FetchData";
+
+const store = createStore(promiseReducer, applyMiddleware(thunk));
+const urlToObiWan = "https://swapi.dev/api/people/10";
+const urlToFilm = "https://swapi.dev/api/films/1/";
+store.dispatch(actionPromise("ObiWan", fetchData(urlToObiWan)));
+store.dispatch(actionPromise("Film", fetchData(urlToFilm)));
+store.subscribe(() => console.log(store.getState()));
+const ConnectHero = connect((state) => state.ObiWan || {})(Hero);
+const ConnectFilm = connect((state) => state.Film || {})(Film);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <ConnectHero />
+        <ConnectFilm />
+      </div>
+    </Provider>
   );
 }
 
